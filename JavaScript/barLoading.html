@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>.:Loading:.</title>
+    <script>
+        var progresso = new Number();
+        var maximo = new Number();
+        var progresso = 0;
+        var maximo = 60
+
+        function start() {
+            if ((progresso + 1) < maximo) {
+                progresso = progresso + 1;
+                document.getElementById("pg").value = progresso;
+                setTimeout("start();", 100);
+            }
+        }
+    </script>
+</head>
+
+<body onload="start();">
+    <progress id="pg" max="59"></progress>
+</body>
+
+</html>

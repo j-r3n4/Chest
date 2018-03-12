@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<title>.:Relógio em JS:.</title>
+		
+		<script type="text/javascript">
+			function relogio() {
+		var data = new Date();
+		var hor = data.getHours();
+		var min = data.getMinutes();
+		var seg = data.getSeconds();
+		if (hor < 10) {
+		hor = "0" + hor;
+		}
+		if (min < 10) {
+		min = "0" + min;
+		}
+		if (seg < 10) {
+		seg = "0" + seg;
+		}
+		document.getElementById("relogio").innerHTML = hor + ":" + min + ":" + seg;
+		}
+		window.setInterval("relogio()", 1000);
+		</script>
+		
+		<style type="text/css">
+			#relogio{
+		color: #800;
+		font: bold 50px Arial;
+		padding: 50px;
+		}
+		</style>
+	</head>
+	
+	<body onload="relogio();">
+		<div id=relogio></div>
+	</body>
+</html>
